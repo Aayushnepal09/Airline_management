@@ -7,7 +7,7 @@ public class connect {
 
     public connect(){
         try{
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             c=DriverManager.getConnection("jdbc:mysql///Airline_Management","root","");
             s=c.createStatement();
 
