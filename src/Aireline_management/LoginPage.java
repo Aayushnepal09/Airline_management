@@ -8,24 +8,26 @@ import java.sql.*;
 
 public class LoginPage  {
     JFrame fr;
-    JLabel lbl_heading,lbl_username,lbl_password;
+    JLabel lbl_heading,lbl_username,lbl_password,lbl_signup;
     JTextField txt_username;
     JPasswordField txt_password;
     JButton btn_login,btn_cancel,btn_reg;
     Font fon1,fon2;
 
+    //creating login page
     public LoginPage() {
-        fr = new JFrame("Login Page");
+        //Title
+        fr = new JFrame("Potato Airlines");
 
-        
         // font
         fon1 = new Font("arial", Font.BOLD, 24);
         fon2 = new Font("arial", Font.BOLD, 18);
+
         //heading
-        lbl_heading = new JLabel("Login Credentials");
+        lbl_heading = new JLabel("Welcome to Potato Airlines");
         lbl_heading.setForeground(Color.red);
         lbl_heading.setFont(fon1);
-        lbl_heading.setBounds(150, 10, 250, 30);
+        lbl_heading.setBounds(85, 10, 350, 40);
         fr.add(lbl_heading);
 
         // label
@@ -55,22 +57,34 @@ public class LoginPage  {
         fr.add(txt_password);
 
         //button
+
+        //login Button
         btn_login=new JButton("Login");
         btn_login.setFont(fon2);
         btn_login.setBounds(155,150,100,40);
         fr.add(btn_login);
 
+        //cancel button
         btn_cancel=new JButton("Cancel");
         btn_cancel.setFont(fon2);
         btn_cancel.setBounds(250,150,100,40);
         fr.add(btn_cancel);
 
-        btn_reg=new JButton("Sign_up");
-        btn_reg.setForeground(Color.red);
-        btn_reg.setBounds(325,200,100,30);
+        //label for signup
+        lbl_signup=new JLabel("Don't have an account?");
+        lbl_signup.setForeground(Color.red);
+        lbl_signup.setFont(fon2);
+        lbl_signup.setBounds(125,230,300,30);
+        fr.add(lbl_signup);
 
+        //sign up button
+        btn_reg=new JButton("click here");
+        btn_reg.setForeground(Color.red);
+        btn_reg.setBounds(332,230,90,30);
         fr.add(btn_reg);
 
+
+        //Windows size and layout
         fr.setSize(450,300);
         fr.setLayout(null);
         fr.setVisible(true);
