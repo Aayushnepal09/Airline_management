@@ -6,12 +6,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
 
-public class LoginPage  {
+public class LoginPage implements ActionListener  {
     JFrame fr;
     JLabel lbl_heading,lbl_username,lbl_password,lbl_signup;
     JTextField txt_username;
     JPasswordField txt_password;
-    JButton btn_login,btn_cancel,btn_reg;
+    JButton btn_login,btn_cancel,btn_reg,btn_reset;
     Font fon1,fon2;
 
     //creating login page
@@ -22,6 +22,8 @@ public class LoginPage  {
         // font
         fon1 = new Font("arial", Font.BOLD, 24);
         fon2 = new Font("arial", Font.BOLD, 18);
+
+
 
         //heading
         lbl_heading = new JLabel("Welcome to Potato Airlines");
@@ -70,12 +72,20 @@ public class LoginPage  {
         btn_cancel.setBounds(250,150,100,40);
         fr.add(btn_cancel);
 
+        //Reset Button
+        btn_reset=new JButton("Reset");
+        btn_reset.setForeground(Color.BLACK);
+        btn_reset.setBounds(200,190,90,30);
+        fr.add(btn_reset);
+
         //label for signup
         lbl_signup=new JLabel("Don't have an account?");
         lbl_signup.setForeground(Color.red);
         lbl_signup.setFont(fon2);
         lbl_signup.setBounds(125,230,300,30);
+        btn_reg.addActionListener(this);
         fr.add(lbl_signup);
+
 
         //sign up button
         btn_reg=new JButton("click here");
@@ -89,15 +99,15 @@ public class LoginPage  {
         fr.setLayout(null);
         fr.setVisible(true);
 
-
-
-
-
-
     }
 
     public static void main(String[] args) {
         new LoginPage();
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
     }
 }
 
