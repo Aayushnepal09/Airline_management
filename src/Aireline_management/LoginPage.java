@@ -5,8 +5,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
-
-public class LoginPage implements ActionListener  {
+//implements ActionListener
+public class LoginPage  {
     JFrame fr;
     JLabel lbl_heading,lbl_username,lbl_password,lbl_signup;
     JTextField txt_username;
@@ -83,14 +83,13 @@ public class LoginPage implements ActionListener  {
         lbl_signup.setForeground(Color.red);
         lbl_signup.setFont(fon2);
         lbl_signup.setBounds(125,230,300,30);
-        btn_reg.addActionListener(this);
         fr.add(lbl_signup);
-
 
         //sign up button
         btn_reg=new JButton("click here");
         btn_reg.setForeground(Color.red);
         btn_reg.setBounds(332,230,90,30);
+     //   btn_reg.addActionListener(this);
         fr.add(btn_reg);
 
 
@@ -105,9 +104,11 @@ public class LoginPage implements ActionListener  {
         new LoginPage();
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-
-    }
+//    @Override
+//    public void actionPerformed(ActionEvent e) {
+//        if(e.getSource()==btn_reg){
+//            new Register();
+//        }
+//    }
 }
 
