@@ -3,7 +3,7 @@ package Aireline_management;
 
 public class connect {
     Connection c;
-    Statement s;
+    Statement s; 
 
     public connect(){
         try{
