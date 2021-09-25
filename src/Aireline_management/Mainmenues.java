@@ -1,6 +1,8 @@
 package Aireline_management;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.*;
 
 
@@ -21,15 +23,17 @@ public class Mainmenues extends JFrame {
         setForeground(Color.CYAN);
         setLayout(null);
 
-        JLabel NewLabel = new JLabel("");
-      //  NewLabel.setIcon(new ImageIcon(ClassLoader.getSystemResource("background.jpg")));
-        NewLabel.setBounds(0, 0, 1920, 990);
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("Aireline_management/icon/background.jpg"));
+        Image i2 = i1.getImage().getScaledInstance(1550, 1000, Image.SCALE_DEFAULT);
+        ImageIcon i3 = new ImageIcon(i2);
+        JLabel NewLabel = new JLabel(i3);
+        NewLabel.setBounds(0, 0, 1550, 1000);
         add(NewLabel);
 
         JLabel AirlineManagementSystem = new JLabel("Thank you for choosing Potato Airline");
-        AirlineManagementSystem.setForeground(Color.BLUE);
+        AirlineManagementSystem.setForeground(Color.RED);
         AirlineManagementSystem.setFont(new Font("arial", Font.PLAIN, 36));
-        AirlineManagementSystem.setBounds(700, 60, 1000, 55);
+        AirlineManagementSystem.setBounds(500, 60, 1000, 55);
         NewLabel.add(AirlineManagementSystem);
 
 
@@ -67,15 +71,14 @@ public class Mainmenues extends JFrame {
         Misc.setForeground(Color.RED);
         menuBar.add(Misc);
 
-
-//        FlightDetails.addActionListener(new ActionListener() {
-//            public void actionPerformed(ActionEvent ae) {
+//        FlightDetails.addActionListener(new ActionListener(){
+//            public void actionPerformed(ActionEvent ae){
 //                new Flight_Info();
 //            }
 //        });
-
-//        ReservationDetails.addActionListener(new ActionListener() {
-//            public void actionPerformed(ActionEvent ae) {
+//
+//        ReservationDetails.addActionListener(new ActionListener(){
+//            public void actionPerformed(ActionEvent ae){
 //                try {
 //                    new Add_Customer();
 //                } catch (Exception e) {
@@ -83,9 +86,9 @@ public class Mainmenues extends JFrame {
 //                }
 //            }
 //        });
-
-//        PassengerDetails.addActionListener(new ActionListener() {
-//            public void actionPerformed(ActionEvent ae) {
+//
+//        PassengerDetails.addActionListener(new ActionListener(){
+//            public void actionPerformed(ActionEvent ae){
 //                try {
 //                    new Journey_Details();
 //                } catch (Exception e) {
@@ -93,9 +96,9 @@ public class Mainmenues extends JFrame {
 //                }
 //            }
 //        });
-
-//        SectorDetails_1.addActionListener(new ActionListener() {
-//            public void actionPerformed(ActionEvent ae) {
+//
+//        SectorDetails_1.addActionListener(new ActionListener(){
+//            public void actionPerformed(ActionEvent ae){
 //                try {
 //                    new Payment_Details();
 //                } catch (Exception e) {
@@ -103,14 +106,14 @@ public class Mainmenues extends JFrame {
 //                }
 //            }
 //        });
+//
+        Cancellation.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent action){
+                new cancel();
+            }
+       });
 
-//        Cancellation.addActionListener(new ActionListener() {
-//            public void actionPerformed(ActionEvent ae) {
-//                new Cancel();
-//            }
-//        });
-
-        setSize(1950, 1090);
+        setSize(1950,1090);
         setVisible(true);
     }
 }

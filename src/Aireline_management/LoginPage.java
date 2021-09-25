@@ -117,7 +117,7 @@ public class LoginPage implements ActionListener  {
         }
 //        if(action.getSource()==b3){
 //            try{
-//                conn c1 = new conn();
+//                connect c1 = new conn();
 //
 //                String s1 = t1.getText();
 //                String s2 = t2.getText();
