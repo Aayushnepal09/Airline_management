@@ -1,9 +1,9 @@
 package Aireline_management;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.*;
 
 
 public class Mainmenues extends JFrame {
@@ -40,43 +40,47 @@ public class Mainmenues extends JFrame {
         JMenuBar menuBar = new JMenuBar();
         setJMenuBar(menuBar);
 
-        JMenu AirlineSystem = new JMenu("AIRLINE SYSTEM");
+        JMenu AirlineSystem = new JMenu("Management");
         AirlineSystem.setForeground(Color.BLUE);
         menuBar.add(AirlineSystem);
 
-        JMenuItem FlightDetails = new JMenuItem("FLIGHT_INFO");
+        JMenuItem FlightDetails = new JMenuItem("Flight Info");
         AirlineSystem.add(FlightDetails);
 
-        JMenuItem ReservationDetails = new JMenuItem("ADD_CUSTOMER_DETAILS");
+        JMenuItem ReservationDetails = new JMenuItem("Add Customer Details");
         AirlineSystem.add(ReservationDetails);
 
-        JMenuItem PassengerDetails = new JMenuItem("JOURNEY_DETAILS");
+        JMenuItem PassengerDetails = new JMenuItem("Journey Details");
         AirlineSystem.add(PassengerDetails);
 
-        JMenuItem SectorDetails_1 = new JMenuItem("PAYMENT_DETAILS");
+        JMenuItem SectorDetails_1 = new JMenuItem("Payment Details");
         AirlineSystem.add(SectorDetails_1);
 
-        JMenuItem Cancellation = new JMenuItem("CANCELLATION");
-        AirlineSystem.add(Cancellation);
+        JMenuItem Cancel = new JMenuItem("Cancel Flight");
+        AirlineSystem.add(Cancel);
 
-        JMenu Ticket = new JMenu("TICKET");
+        JMenu Ticket = new JMenu("Ticket");
         Ticket.setForeground(Color.RED);
         menuBar.add(Ticket);
 
-        JMenu List = new JMenu("LIST");
+        JMenu List = new JMenu("List");
         List.setForeground(Color.BLUE);
         menuBar.add(List);
 
-        JMenu Misc = new JMenu("MISC");
-        Misc.setForeground(Color.RED);
-        menuBar.add(Misc);
+        JMenu about = new JMenu("About");
+        about.setForeground(Color.RED);
+        menuBar.add(about);
 
-//        FlightDetails.addActionListener(new ActionListener(){
-//            public void actionPerformed(ActionEvent ae){
-//                new Flight_Info();
-//            }
-//        });
-//
+        FlightDetails.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent action){
+                new flightInfo();
+            }
+        });
+        about.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent action){
+                new about();
+            }
+        });
 //        ReservationDetails.addActionListener(new ActionListener(){
 //            public void actionPerformed(ActionEvent ae){
 //                try {
@@ -107,7 +111,7 @@ public class Mainmenues extends JFrame {
 //            }
 //        });
 //
-        Cancellation.addActionListener(new ActionListener(){
+        Cancel.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent action){
                 new cancel();
             }

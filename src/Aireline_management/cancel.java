@@ -2,7 +2,8 @@ package Aireline_management;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 
 public class cancel extends JFrame {
@@ -37,32 +38,32 @@ public class cancel extends JFrame {
         add(NewLabel);
 
         JLabel PassengerNo = new JLabel("PASSENGER NO");
-        PassengerNo.setFont(new Font("Tahoma", Font.PLAIN, 17));
+        PassengerNo.setFont(new Font("arial", Font.PLAIN, 17));
         PassengerNo.setBounds(60, 100, 132, 26);
         add(PassengerNo);
 
         JLabel CancellationNo = new JLabel("CANCELLATION NO");
-        CancellationNo.setFont(new Font("Tahoma", Font.PLAIN, 17));
+        CancellationNo.setFont(new Font("Tarial", Font.PLAIN, 17));
         CancellationNo.setBounds(60, 150, 150, 27);
         add(CancellationNo);
 
         JLabel CancellationDate = new JLabel("CANCELLATION DATE");
-        CancellationDate.setFont(new Font("Tahoma", Font.PLAIN, 17));
+        CancellationDate.setFont(new Font("arial", Font.PLAIN, 17));
         CancellationDate.setBounds(60, 200, 180, 27);
         add(CancellationDate);
 
         JLabel Ticketid = new JLabel("TICKET_ID");
-        Ticketid.setFont(new Font("Tahoma", Font.PLAIN, 17));
+        Ticketid.setFont(new Font("arial", Font.PLAIN, 17));
         Ticketid.setBounds(60, 250, 150, 27);
         add(Ticketid);
 
         JLabel Flightcode = new JLabel("FLIGHT_CODE");
-        Flightcode.setFont(new Font("Tahoma", Font.PLAIN, 17));
+        Flightcode.setFont(new Font("arial", Font.PLAIN, 17));
         Flightcode.setBounds(60, 300, 150, 27);
         add(Flightcode);
 
         JButton Cancel = new JButton("CANCEL");
-        Cancel.setFont(new Font("Tahoma", Font.PLAIN, 14));
+        Cancel.setFont(new Font("arial", Font.PLAIN, 14));
         Cancel.setBackground(Color.BLACK);
         Cancel.setForeground(Color.WHITE);
         Cancel.setBounds(250, 350, 150, 30);

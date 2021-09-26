@@ -2,7 +2,8 @@ package Aireline_management;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 //
 public class LoginPage implements ActionListener  {
@@ -17,7 +18,7 @@ public class LoginPage implements ActionListener  {
     public LoginPage() {
         //Title
         fr = new JFrame("Potato Airlines");
-
+        fr.getContentPane().setBackground(Color.yellow);
         // font
         fon1 = new Font("arial", Font.BOLD, 24);
         fon2 = new Font("arial", Font.BOLD, 18);
