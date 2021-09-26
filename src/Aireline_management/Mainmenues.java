@@ -26,6 +26,7 @@ public class Mainmenues extends JFrame {
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("Aireline_management/icon/background.jpg"));
         Image i2 = i1.getImage().getScaledInstance(1550, 1000, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
+
         JLabel NewLabel = new JLabel(i3);
         NewLabel.setBounds(0, 0, 1550, 1000);
         add(NewLabel);
@@ -50,7 +51,7 @@ public class Mainmenues extends JFrame {
         JMenuItem ReservationDetails = new JMenuItem("Add Customer Details");
         AirlineSystem.add(ReservationDetails);
 
-        JMenuItem PassengerDetails = new JMenuItem("Journey Details");
+        JMenuItem PassengerDetails = new JMenuItem("Flight info");
         AirlineSystem.add(PassengerDetails);
 
         JMenuItem SectorDetails_1 = new JMenuItem("Payment Details");
@@ -59,23 +60,19 @@ public class Mainmenues extends JFrame {
         JMenuItem Cancel = new JMenuItem("Cancel Flight");
         AirlineSystem.add(Cancel);
 
-        JMenu Ticket = new JMenu("Ticket");
-        Ticket.setForeground(Color.RED);
-        menuBar.add(Ticket);
 
-        JMenu List = new JMenu("List");
-        List.setForeground(Color.BLUE);
-        menuBar.add(List);
 
         JMenu about = new JMenu("About");
         about.setForeground(Color.RED);
         menuBar.add(about);
+
 
         FlightDetails.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent action){
                 new flightInfo();
             }
         });
+
         about.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent action){
                 new about();
@@ -91,15 +88,15 @@ public class Mainmenues extends JFrame {
 //            }
 //        });
 //
-//        PassengerDetails.addActionListener(new ActionListener(){
-//            public void actionPerformed(ActionEvent ae){
-//                try {
-//                    new Journey_Details();
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        });
+        PassengerDetails.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                try {
+                    new journey();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
 //
 //        SectorDetails_1.addActionListener(new ActionListener(){
 //            public void actionPerformed(ActionEvent ae){

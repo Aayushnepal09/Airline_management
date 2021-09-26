@@ -30,7 +30,7 @@ public class flightInfo extends JFrame{
 
         JLabel FlightDetails = new JLabel("FLIGHT INFORMATION");
         FlightDetails.setFont(new Font("arial", Font.PLAIN, 31));
-        FlightDetails.setForeground(new Color(100, 149, 237));
+        FlightDetails.setForeground(Color.BLUE);;
         FlightDetails.setBounds(50, 20, 570, 35);
         add(FlightDetails);
 

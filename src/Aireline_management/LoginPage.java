@@ -4,8 +4,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.ResultSet;
+import java.util.Set;
 
-//
+
 public class LoginPage implements ActionListener  {
     JFrame fr;
     JLabel lbl_heading,lbl_username,lbl_password,lbl_signup;
@@ -116,32 +118,30 @@ public class LoginPage implements ActionListener  {
         if(action.getSource()==btn_cancel){
             System.exit(0);
         }
-//        if(action.getSource()==b3){
-//            try{
-//                connect c1 = new conn();
-//
-//                String s1 = t1.getText();
-//                String s2 = t2.getText();
-//
-//                String str = "select * from login where username = '"+s1+"' and password = '"+s2+"'";
-//                ResultSet rs = c1.s.executeQuery(str);
-//
-//                if(rs.next()){
-//                    new Mainframe();
-//                    setVisible(false);
-//                }else{
-//                    JOptionPane.showMessageDialog(null,"Invalid Login");
-//                    setVisible(false);
-//                }
-//
-//            }catch(Exception e){}
+        if(action.getSource()==btn_login){
+          try{
+                connect c1 = new connect();
 
-        }
+                String s1 = txt_username.getText();
+                String s2 = txt_password.getText();
+
+                String str = "select * from login where username = '"+s1+"' and password = '"+s2+"'";
+                Set rs = (Set) c1.s.executeQuery(str);
+
+                if(((ResultSet) rs).next()){
+                    new Mainmenues();
+                    fr.setVisible(false);
+                }else{
+                    JOptionPane.showMessageDialog(null,"Invalid Login");
+                    fr.setVisible(true);
+                }
+
+            }catch(Exception e){}
+
+        }}
     public static void main(String[] args) {
         new LoginPage();
     }
-
-
 
     }
 

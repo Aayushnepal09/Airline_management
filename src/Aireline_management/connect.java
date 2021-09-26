@@ -11,9 +11,8 @@ public class connect {
     public connect(){
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            c=DriverManager.getConnection("jdbc:mysql///Airline_Management","root","");
-            s=c.createStatement();
-
+            c =DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/EMS","root","aayush");
+            s =c.createStatement();
 
         } catch (Exception e) {
             System.out.println(e);
