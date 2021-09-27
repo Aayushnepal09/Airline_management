@@ -99,13 +99,13 @@ public class journey extends JFrame{  //Forth
 
 
 
- //       Show.addActionListener(new ActionListener(){
+//       Show.addActionListener(new ActionListener(){
 //            public void actionPerformed(ActionEvent ae){
-//                try{
-//                    String src  = (String) comboBox.getSelectedItem();
+//               try{
+//                   String src  = (String) comboBox.getSelectedItem();
 //                    String dst  = (String) comboBox_1.getSelectedItem();
 //
-//                    conn c = new conn();
+//                    connect c = new connect();
 //
 //                    String str = "select pnr_no,ticket_id,f_code,jny_date,jny_time,src,dst from reservation where src = '"+src+"' and dst = '"+dst+"'";
 //                    ResultSet rs=c.s.executeQuery(str);

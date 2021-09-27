@@ -13,9 +13,10 @@ public class connect {
             Class.forName("com.mysql.cj.jdbc.Driver");
             c =DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/EMS","root","aayush");
             s =c.createStatement();
+            System.out.println("connected");
 
         } catch (Exception e) {
-            System.out.println(e);
+            System.out.println();
         }
     }
 

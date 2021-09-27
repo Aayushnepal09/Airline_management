@@ -20,45 +20,53 @@ public class cancel extends JFrame {
 
     private void initialize() {
         setTitle("CANCELLATION");
-        getContentPane().setBackground(Color.cyan);
+        getContentPane().setBackground(new Color(23,64,89,255));
         setBounds(100, 100, 801, 472);
         setLayout(null);
 
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("Aireline_management/icon/ticket.jpg"));
+        Image i2 = i1.getImage().getScaledInstance(1000, 500, Image.SCALE_DEFAULT);
+        ImageIcon i3 = new ImageIcon(i2);
+        JLabel NewLabel = new JLabel(i3);
+        NewLabel.setBounds(410, 0, 1000, 500);
+        add(NewLabel);
+
         JLabel Cancellation = new JLabel("CANCELLATION");
-        Cancellation.setFont(new Font("Tahoma", Font.PLAIN, 31));
+        Cancellation.setFont(new Font("arial", Font.PLAIN, 31));
+        Cancellation.setForeground(Color.white);
         Cancellation.setBounds(185, 24, 259, 38);
         add(Cancellation);
 
 
-       ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("Aireline_management/icon/icon.jpg"));
-        Image i2 = i1.getImage().getScaledInstance(250, 250, Image.SCALE_DEFAULT);
-        ImageIcon i3 = new ImageIcon(i2);
-        JLabel NewLabel = new JLabel(i3);
-        NewLabel.setBounds(470, 100, 250, 250);
-        add(NewLabel);
+
 
         JLabel PassengerNo = new JLabel("PASSENGER NO");
         PassengerNo.setFont(new Font("arial", Font.PLAIN, 17));
         PassengerNo.setBounds(60, 100, 132, 26);
+        PassengerNo.setForeground(Color.white);
         add(PassengerNo);
 
         JLabel CancellationNo = new JLabel("CANCELLATION NO");
-        CancellationNo.setFont(new Font("Tarial", Font.PLAIN, 17));
+        CancellationNo.setFont(new Font("arial", Font.PLAIN, 17));
+        CancellationNo.setForeground(Color.white);
         CancellationNo.setBounds(60, 150, 150, 27);
         add(CancellationNo);
 
         JLabel CancellationDate = new JLabel("CANCELLATION DATE");
         CancellationDate.setFont(new Font("arial", Font.PLAIN, 17));
+        CancellationDate.setForeground(Color.white);
         CancellationDate.setBounds(60, 200, 180, 27);
         add(CancellationDate);
 
         JLabel Ticketid = new JLabel("TICKET_ID");
         Ticketid.setFont(new Font("arial", Font.PLAIN, 17));
+        Ticketid.setForeground(Color.white);
         Ticketid.setBounds(60, 250, 150, 27);
         add(Ticketid);
 
         JLabel Flightcode = new JLabel("FLIGHT_CODE");
         Flightcode.setFont(new Font("arial", Font.PLAIN, 17));
+        Flightcode.setForeground(Color.white);
         Flightcode.setBounds(60, 300, 150, 27);
         add(Flightcode);
 

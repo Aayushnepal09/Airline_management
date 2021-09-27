@@ -1,8 +1,10 @@
 package Aireline_management;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 
 public class flightInfo extends JFrame{
     private JTable table;

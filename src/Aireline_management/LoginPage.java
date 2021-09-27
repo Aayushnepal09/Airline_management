@@ -118,6 +118,10 @@ public class LoginPage implements ActionListener  {
         if(action.getSource()==btn_cancel){
             System.exit(0);
         }
+        if(action.getSource()==btn_signup){
+            new Mainmenues();
+            fr.dispose();
+        }
         if(action.getSource()==btn_login){
           try{
                 connect c1 = new connect();

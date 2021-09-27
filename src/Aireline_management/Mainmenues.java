@@ -26,7 +26,6 @@ public class Mainmenues extends JFrame {
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("Aireline_management/icon/background.jpg"));
         Image i2 = i1.getImage().getScaledInstance(1550, 1000, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
-
         JLabel NewLabel = new JLabel(i3);
         NewLabel.setBounds(0, 0, 1550, 1000);
         add(NewLabel);
@@ -78,18 +77,18 @@ public class Mainmenues extends JFrame {
                 new about();
             }
         });
-//        ReservationDetails.addActionListener(new ActionListener(){
-//            public void actionPerformed(ActionEvent ae){
-//                try {
-//                    new Add_Customer();
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        });
-//
-        PassengerDetails.addActionListener(new ActionListener(){
+        ReservationDetails.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent ae){
+                try {
+                    new Adding();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        PassengerDetails.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent action){
                 try {
                     new journey();
                 } catch (Exception e) {
