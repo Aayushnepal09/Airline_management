@@ -23,7 +23,7 @@ public class Mainmenues extends JFrame {
         setForeground(Color.CYAN);
         setLayout(null);
 
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("Aireline_management/icon/background.jpg"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icon/background.jpg"));
         Image i2 = i1.getImage().getScaledInstance(1550, 1000, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel NewLabel = new JLabel(i3);
@@ -50,7 +50,7 @@ public class Mainmenues extends JFrame {
         JMenuItem ReservationDetails = new JMenuItem("Add Customer Details");
         AirlineSystem.add(ReservationDetails);
 
-        JMenuItem PassengerDetails = new JMenuItem("Flight info");
+        JMenuItem PassengerDetails = new JMenuItem("Ticket info");
         AirlineSystem.add(PassengerDetails);
 
         JMenuItem SectorDetails_1 = new JMenuItem("Payment Details");
@@ -73,10 +73,15 @@ public class Mainmenues extends JFrame {
         });
 
         about.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent action){
-                new about();
+            public void actionPerformed(ActionEvent ae){
+                try {
+                    new about();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
+
         ReservationDetails.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent ae){
                 try {
@@ -96,22 +101,24 @@ public class Mainmenues extends JFrame {
                 }
             }
         });
-//
-//        SectorDetails_1.addActionListener(new ActionListener(){
-//            public void actionPerformed(ActionEvent ae){
-//                try {
-//                    new Payment_Details();
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        });
-//
+
+        SectorDetails_1.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                try {
+                    new payment();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
         Cancel.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent action){
                 new cancel();
             }
+
        });
+
 
         setSize(1950,1090);
         setVisible(true);

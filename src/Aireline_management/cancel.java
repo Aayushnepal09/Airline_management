@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 
 
 public class cancel extends JFrame {
-
+JLabel label;
     private JTextField textField, textField_1, textField_2, textField_3, textField_4;
 
     public static void main(String[] args) {
@@ -24,12 +24,7 @@ public class cancel extends JFrame {
         setBounds(100, 100, 801, 472);
         setLayout(null);
 
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("Aireline_management/icon/ticket.jpg"));
-        Image i2 = i1.getImage().getScaledInstance(1000, 500, Image.SCALE_DEFAULT);
-        ImageIcon i3 = new ImageIcon(i2);
-        JLabel NewLabel = new JLabel(i3);
-        NewLabel.setBounds(410, 0, 1000, 500);
-        add(NewLabel);
+
 
         JLabel Cancellation = new JLabel("CANCELLATION");
         Cancellation.setFont(new Font("arial", Font.PLAIN, 31));
@@ -49,13 +44,13 @@ public class cancel extends JFrame {
         JLabel CancellationNo = new JLabel("CANCELLATION NO");
         CancellationNo.setFont(new Font("arial", Font.PLAIN, 17));
         CancellationNo.setForeground(Color.white);
-        CancellationNo.setBounds(60, 150, 150, 27);
+        CancellationNo.setBounds(60, 150, 200, 27);
         add(CancellationNo);
 
         JLabel CancellationDate = new JLabel("CANCELLATION DATE");
         CancellationDate.setFont(new Font("arial", Font.PLAIN, 17));
         CancellationDate.setForeground(Color.white);
-        CancellationDate.setBounds(60, 200, 180, 27);
+        CancellationDate.setBounds(60, 200, 200, 27);
         add(CancellationDate);
 
         JLabel Ticketid = new JLabel("TICKET_ID");
@@ -97,6 +92,12 @@ public class cancel extends JFrame {
         textField_4.setBounds(250, 300, 150, 27);
         add(textField_4);
 
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icon/ticket.jpg"));
+        Image i2 = i1.getImage().getScaledInstance(2000, 500, Image.SCALE_DEFAULT);
+        ImageIcon i3 = new ImageIcon(i2);
+        JLabel NewLabel = new JLabel(i3);
+        NewLabel.setBounds(0, 0, 2000, 500);
+        add(NewLabel);
         Cancel.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
 

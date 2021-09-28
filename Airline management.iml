@@ -14,8 +14,11 @@
           <root url="jar://$MODULE_DIR$/libraries/mysql-connector-java-8.0.26.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.ideaLibSources/mysql-connector-java-8.0.26-sources.jar!/" />
+        </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="library" name="rs2xml" level="project" />
   </component>
 </module>

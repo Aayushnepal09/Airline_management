@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 public class Adding extends JFrame{
 
 
-    JTextField textField,textField_1,textField_2,textField_3,textField_4,textField_5,textField_6;
+    JTextField password, prn, nation, naame, phone, addre, flightcode;
 
     public Adding(){
 
@@ -20,7 +20,7 @@ public class Adding extends JFrame{
         setSize(778,486);
         getContentPane().setLayout(null);
 
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("Aireline_management/icon/top-view-airplane-copy-space.jpg"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icon/top-view-airplane-copy-space.jpg"));
         Image i2 = i1.getImage().getScaledInstance(500, 500, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel NewLabel = new JLabel(i3);
@@ -32,10 +32,9 @@ public class Adding extends JFrame{
         Passportno.setBounds(60, 80, 150, 27);
         add(Passportno);
 
-        textField = new JTextField();
-        textField.setBounds(200, 80, 150, 27);
-        add(textField);
-
+        password = new JTextField();
+        password.setBounds(200, 80, 150, 27);
+        add(password);
         JButton Next = new JButton("SAVE");
         Next.setBounds(200, 420, 150, 30);
         Next.setBackground(Color.BLACK);
@@ -47,36 +46,35 @@ public class Adding extends JFrame{
         Pnrno.setBounds(60, 120, 150, 27);
         add(Pnrno);
 
-        textField_1 = new JTextField();
-        textField_1.setBounds(200, 120, 150, 27);
-        add(textField_1);
-
+        prn = new JTextField();
+        prn.setBounds(200, 120, 150, 27);
+        add(prn);
         JLabel Address = new JLabel("ADDRESS");
         Address.setFont(new Font("arial", Font.PLAIN, 17));
         Address.setBounds(60, 170, 150, 27);
         add(Address);
 
-        textField_2 = new JTextField();
-        textField_2.setBounds(200, 170, 150, 27);
-        add(textField_2);
+        nation = new JTextField();
+        nation.setBounds(200, 170, 150, 27);
+        add(nation);
 
         JLabel Nationality = new JLabel("NATIONALITY");
         Nationality.setFont(new Font("arial", Font.PLAIN, 17));
         Nationality.setBounds(60, 220, 150, 27);
         add(Nationality);
 
-        textField_3 = new JTextField();
-        textField_3.setBounds(200, 220, 150, 27);
-        add(textField_3);
+        naame = new JTextField();
+        naame.setBounds(200, 220, 150, 27);
+        add(naame);
 
         JLabel Name = new JLabel("NAME");
         Name.setFont(new Font("arial", Font.PLAIN, 17));
         Name.setBounds(60, 270, 150, 27);
         add(Name);
 
-        textField_4 = new JTextField();
-        textField_4.setBounds(200, 270, 150, 27);
-        add(textField_4);
+        phone = new JTextField();
+        phone.setBounds(200, 270, 150, 27);
+        add(phone);
 
         JLabel Gender = new JLabel("GENDER");
         Gender.setFont(new Font("arial", Font.PLAIN, 17));
@@ -98,9 +96,9 @@ public class Adding extends JFrame{
         Phno.setBounds(60, 370, 150, 27);
         add(Phno);
 
-        textField_5 = new JTextField();
-        textField_5.setBounds(200, 370, 150, 27);
-        add(textField_5);
+        addre = new JTextField();
+        addre.setBounds(200, 370, 150, 27);
+        add(addre);
 
         setVisible(true);
 
@@ -116,9 +114,9 @@ public class Adding extends JFrame{
         Flightcode.setBounds(60, 30, 150, 27);
         add(Flightcode);
 
-        textField_6 = new JTextField();
-        textField_6.setBounds(200, 30, 150, 27);
-        add(textField_6);
+        flightcode = new JTextField();
+        flightcode.setBounds(200, 30, 150, 27);
+        add(flightcode);
 
 
 
@@ -126,15 +124,15 @@ public class Adding extends JFrame{
 
         Next.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent ae){
-                String passport_No = textField.getText();
-                String pnr_no = textField_1.getText();
-                String address =  textField_2.getText();
-                String nationality = textField_3.getText();
-                String name = textField_4.getText();
-                String fl_code = textField_6.getText();
+                String passport_No = password.getText();
+                String pnr_no = prn.getText();
+                String address =  addre.getText();
+                String nationality = nation.getText();
+                String name = naame.getText();
+                String fl_code = flightcode.getText();
 
                 String gender = null;
-                String ph_no = textField_5.getText();
+                String ph_no = phone.getText();
 
                 if(Male.isSelected()){
                     gender = "male";
@@ -145,7 +143,7 @@ public class Adding extends JFrame{
 
                 try {
                     connect c = new connect();
-                    String str = "INSERT INTO passenger values( '"+pnr_no+"', '"+address+"', '"+nationality+"','"+name+"', '"+gender+"', '"+ph_no+"','"+passport_No+"', '"+fl_code+"')";
+                    String str = "INSERT INTO customer values( '"+pnr_no+"', '"+address+"', '"+nationality+"','"+name+"', '"+gender+"', '"+ph_no+"','"+passport_No+"', '"+fl_code+"')";
 
                     c.s.executeUpdate(str);
                     JOptionPane.showMessageDialog(null,"Customer Added");

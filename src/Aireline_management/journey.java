@@ -43,42 +43,42 @@ public class journey extends JFrame{  //Forth
 
         Ticket_info = new JLabel("Ticket info");
         Ticket_info.setForeground(Color.BLUE);
-        Ticket_info.setFont(new Font("arial", Font.PLAIN, 31));
+        Ticket_info.setFont(new Font("arial", Font.BOLD, 31));
         Ticket_info.setBounds(290, 27, 359, 31);
         add(Ticket_info);
 
         id = new JLabel("SN");
-        id.setFont(new Font("arial", Font.PLAIN, 13));
+        id.setFont(new Font("arial", Font.BOLD, 13));
         id.setBounds(79, 270, 83, 20);
         add(id);
 
         Ticket_NO = new JLabel("TICKET No");
-        Ticket_NO.setFont(new Font("arial", Font.PLAIN, 13));
+        Ticket_NO.setFont(new Font("arial", Font.BOLD, 13));
         Ticket_NO.setBounds(172, 270, 71, 20);
         add(Ticket_NO);
 
         Fcode = new JLabel("Boarding time");
-        Fcode.setFont(new Font("arial", Font.PLAIN, 13));
+        Fcode.setFont(new Font("arial", Font.BOLD, 13));
         Fcode.setBounds(297, 270, 103, 20);
         add(Fcode);
 
         Jnydate = new JLabel("DATE");
-        Jnydate.setFont(new Font("arial", Font.PLAIN, 13));
+        Jnydate.setFont(new Font("arial", Font.BOLD, 13));
         Jnydate.setBounds(390, 270, 94, 20);
         add(Jnydate);
 
         Jnytime = new JLabel("Arrival TIME");
-        Jnytime.setFont(new Font("arial", Font.PLAIN, 13));
+        Jnytime.setFont(new Font("arial", Font.BOLD, 13));
         Jnytime.setBounds(494, 270, 83, 20);
         add(Jnytime);
 
         Source = new JLabel("From");
-        Source.setFont(new Font("arial", Font.PLAIN, 13));
+        Source.setFont(new Font("arial", Font.BOLD, 13));
         Source.setBounds(613, 270, 94, 20);
         add(Source);
 
         Destination = new JLabel("To");
-        Destination.setFont(new Font("arial", Font.PLAIN, 13));
+        Destination.setFont(new Font("arial", Font.BOLD, 13));
         Destination.setBounds(717, 270, 94, 20);
         add(Destination);
 
@@ -97,7 +97,12 @@ public class journey extends JFrame{  //Forth
         table.setBounds(38, 310, 770, 130);
         add(table);
 
-
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icon/work.jpg"));
+        Image i2 = i1.getImage().getScaledInstance(860,600, Image.SCALE_DEFAULT);
+        ImageIcon i3 = new ImageIcon(i2);
+        JLabel NewLabel = new JLabel(i3);
+        NewLabel.setBounds(0, 0, 860,600);
+        add(NewLabel);
 
 //       Show.addActionListener(new ActionListener(){
 //            public void actionPerformed(ActionEvent ae){
@@ -113,7 +118,7 @@ public class journey extends JFrame{  //Forth
 //                    if(rs.next()){
 //                        table.setModel(DbUtils.resultSetToTableModel(rs));
 //                    }else{
-//                        JOptionPane.showMessageDialog(null,"No Flights between Source and Destination");
+//                        JOptionPane.showMessageDialog(null,"No Flights between given location");
 //
 //                    }
 //
